@@ -1,0 +1,27 @@
+name: Task
+description: A part of work that needs to be done to fulfill a User-Story.
+title: "[Task] <title>"
+labels: ["task"]
+body:
+  - type: textarea
+    id: work-to-be-done
+    attributes:
+      label: Description of work
+      description: Work necessary or problem to solve.
+      placeholder: |
+        * Work/Problem
+        * Proposed solution
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Metric of Task Progress
+      placeholder: |
+        * List of requirements at user or system level
+        * May also include screenshots, system flow diagrams, or sequence diagrams here.
+        * Must be specific to the task
+        * Must be met to ensure task is complete.
+    validations:
+      required: false

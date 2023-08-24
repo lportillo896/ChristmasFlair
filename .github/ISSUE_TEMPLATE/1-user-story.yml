@@ -1,0 +1,61 @@
+name: User Story
+description: Independent, negotiable, Valuable, Estimable, Small and Testable description of work that needs to be done from the perspective of the user.
+title: "[User Story] <title>"
+labels: ["user-story"]
+body:
+  - type: input
+    id: persona
+    attributes:
+      label: As a ...
+      description: List the persona this user story applies to.
+      placeholder: "Who?"
+    validations:
+      required: true
+  - type: input
+    id: accomplishment
+    attributes:
+      label: I want to ...
+      description: What the persona wants to accomplish?
+      placeholder: "What?"
+    validations:
+      required: true
+  - type: input
+    id: why
+    attributes:
+      label: So that ...
+      description: Why they want to accomplish that thing?
+      placeholder: "Why?"
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tasks
+      description: "List of task-issues necessary to complete part of this user story."
+      placeholder: |
+        Create a "Task Issue" then use the text-area's create a task list linking each task to this user-story with the # syntax."
+        e.g. - [ ] #5555"
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Metric of Story Progress
+      placeholder: |
+        * List of requirements at user or system level
+        * May also include screenshots, system flow diagrams, or sequence diagrams here.
+        * Must be specific to the User Story
+        * Must be met to ensure story is complete.
+    validations:
+      required: false
+  - type: textarea
+    id: progress
+    attributes:
+      label: Definition of Done
+      description: Metric of Sprint Progress
+      placeholder: |
+        * List of criteria for ALL User Stories
+        * Sprint work only complete once all criteria are met
+    validations:
+      required: false
